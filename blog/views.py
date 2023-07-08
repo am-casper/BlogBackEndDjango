@@ -41,6 +41,6 @@ class UserPostView(APIView):
 class UserPostsView(APIView):
     @csrf_exempt
     def get(self, request, username):
-        post = Post.objects.filter(author=username)
+        post = Post.objects.filter(author__username=username)
         serializer = PostSerializer(post, many=True)
         return Response(serializer.data)

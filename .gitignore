@@ -1,0 +1,5 @@
+/blog/__pycache__
+/blog/migrations
+/myvenv
+/pehla/__pycache__
+*.sqlite3
